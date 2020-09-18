@@ -17,7 +17,7 @@ app.use(
 );
 
 app.get("/", (req, res) => {
-  res.send("My mailer");
+  res.send("My mail sending API");
 });
 
 app.post("/send-mail", async (req, res) => {
