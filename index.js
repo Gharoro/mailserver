@@ -59,7 +59,7 @@ app.post("/send-mail", async (req, res) => {
       status: 200,
       success: true,
       message:
-        "Thank you for contacting me! I will get back to you as soon as I can!",
+        "Your message has been sent. I will get back to you as soon as I can. Regards.",
     });
   } catch (error) {
     // console.log(error);
