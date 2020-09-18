@@ -24,6 +24,8 @@ app.post("/send-mail", async (req, res) => {
   const { name, subject, email, message } = req.body;
   if (!name || !subject || !email || !message) {
     return res.status(400).json({
+      status: 400,
+      success: false,
       message: "Hello! Kindly fill all fields.",
     });
   }
@@ -54,12 +56,16 @@ app.post("/send-mail", async (req, res) => {
     });
 
     return res.status(200).json({
+      status: 200,
+      success: true,
       message:
         "Thank you for contacting me! I will get back to you as soon as I can!",
     });
   } catch (error) {
     // console.log(error);
     return res.status(500).json({
+      status: 500,
+      success: false,
       message:
         "Hi! I cannot receive emails at the moment. Kindly try again later. Thank you!",
     });
