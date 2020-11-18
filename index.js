@@ -46,7 +46,7 @@ app.post("/send-mail", async (req, res) => {
         },
         to: [
           {
-            email: "gharoropureheart@gmail.com",
+            email: "p.gharoro@talenture.co.uk",
             name: "Pureheart Gharoro",
           },
         ],
