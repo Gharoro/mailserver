@@ -55,7 +55,7 @@ app.post("/send-mail", async (req, res) => {
         "Your message has been sent. I will get back to you as soon as I can. Regards.",
     });
   } catch (error) {
-    // console.log(error);
+    console.log(error);
     return res.status(500).json({
       status: 500,
       success: false,
