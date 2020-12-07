@@ -21,14 +21,7 @@ app.get("/", (req, res) => {
 });
 
 app.post("/send-mail", async (req, res) => {
-  const { name, subject, email, message } = req.body;
-  if (!name || !subject || !email || !message) {
-    return res.status(400).json({
-      status: 400,
-      success: false,
-      message: "Hello! Kindly fill all fields.",
-    });
-  }
+  const { name, email, message } = req.body;
 
   try {
     await axios({
@@ -46,11 +39,11 @@ app.post("/send-mail", async (req, res) => {
         },
         to: [
           {
-            email: "p.gharoro@talenture.co.uk",
+            email: "gharoropureheart@gmail.com",
             name: "Pureheart Gharoro",
           },
         ],
-        subject: subject,
+        subject: "New Message From Personal Website.",
         htmlContent: message,
       },
     });
