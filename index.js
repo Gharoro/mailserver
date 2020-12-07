@@ -51,16 +51,13 @@ app.post("/send-mail", async (req, res) => {
     return res.status(200).json({
       status: 200,
       success: true,
-      message:
-        "Your message has been sent. I will get back to you as soon as I can. Regards.",
+      message: "Thank you for your message 🙂. Will get back to you soon.",
     });
   } catch (error) {
-    console.log(error);
     return res.status(500).json({
       status: 500,
       success: false,
-      message:
-        "Hi! I cannot receive emails at the moment. Kindly try again later. Thank you!",
+      message: "Unable to send email. Please try again later. Thank you!",
     });
   }
 });
