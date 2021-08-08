@@ -21,7 +21,7 @@ app.get("/", (req, res) => {
 });
 
 app.post("/send-mail", async (req, res) => {
-  const { name, email, message } = req.body;
+  const { name, email, subject, message } = req.body;
 
   try {
     await axios({
@@ -43,7 +43,7 @@ app.post("/send-mail", async (req, res) => {
             name: "Pureheart Gharoro",
           },
         ],
-        subject: "New Message From Personal Website.",
+        subject: subject,
         htmlContent: message,
       },
     });
